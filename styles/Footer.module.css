@@ -1,0 +1,80 @@
+.container {
+  height: 45vh;
+  background-color: #222;
+  display: flex;
+  position: relative;
+  /* bottom: 0; */
+}
+
+.item {
+  flex: 1;
+  position: relative;
+  display: flex;
+}
+.item:last-child {
+  flex: 2;
+  padding: 70px;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1;
+  padding: 0 20px;
+  text-align: center;
+}
+.title {
+  font-size: 18px;
+  color: #b7903c;
+}
+
+.text {
+  color: lightgray;
+}
+
+.moto {
+  color: rgb(166, 163, 163);
+}
+
+.footerMenu {
+  display: none;
+}
+@media screen and (max-width: 1000px) {
+  .container {
+    height: auto;
+    text-align: center;
+    flex-direction: column;
+  }
+  .item:first-child {
+    display: none;
+  }
+  .item {
+    flex-direction: column;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .text {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  
+  /* .footerMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    list-style: none;
+    width: 100%;
+    height: 4rem;
+    background-color: #d1411e;
+    position: sticky;
+    bottom: 0;
+
+    direction: rtl;
+    margin: 0px;
+  }
+  .footerMenu li {
+    cursor: pointer;
+  } */
+}

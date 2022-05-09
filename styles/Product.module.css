@@ -1,0 +1,160 @@
+.container {
+  height: calc(100vh - 100px);
+  display: flex;
+}
+
+.left {
+  flex: 1;
+  padding: 10px;
+  direction: rtl;
+  margin: 0 2rem;
+}
+
+.price {
+  color: #d1411e;
+  font-size: 1.5rem;
+  font-weight: 400;
+  border-bottom: 1px solid #d1411e;
+  padding: 3px;
+}
+
+.sizes {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.size {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin: 14px 0;
+  transition: transform 0.7s ease-in-out;
+}
+.size img:hover {
+  transform: rotate(180deg);
+}
+.size:nth-child(2) {
+  width: 40px;
+  height: 40px;
+}
+
+.size:last-child {
+  width: 50px;
+  height: 50px;
+}
+.sizeNumber {
+  position: absolute;
+  top: -25px;
+  right: -5px;
+  background-color: #e9785c;
+  border-radius: 5px;
+  font-size: 14px;
+  color: white;
+  padding: 2px;
+}
+
+.sizeNumberLast {
+  position: absolute;
+  top: -25px;
+  right: 0px;
+  background-color: #e9785c;
+  border-radius: 5px;
+  font-size: 14px;
+  color: white;
+  padding: 2px 10px;
+}
+
+.ingredients {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.checkbox {
+  width: 20px;
+  height: 20px;
+}
+.quantity {
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1.5px solid gray;
+}
+.btnAdd {
+  height: 30px;
+  background-color: #d1411e;
+  color: white;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  margin-right: 3px;
+  border-radius: 5px;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgContainer {
+  width: 80%;
+  height: 80%;
+  position: relative;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    height: auto;
+    text-align: center;
+    flex-direction: column;
+    direction: ltr;
+    margin-top: 1rem;
+  }
+  .imgContainer {
+    width: 70vw;
+    height: 40vh;
+  }
+
+  .left {
+    text-align: center;
+  }
+
+  .sizes {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .ingredients {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .option {
+    margin: 10px;
+    font-size: 18px;
+  }
+
+  .quantity {
+    height: 50px;
+    padding: 10px 0px;
+  }
+
+  .btnAdd {
+    height: 50px;
+    padding: 10px 20px;
+  }
+}

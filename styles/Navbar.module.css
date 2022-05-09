@@ -1,0 +1,200 @@
+.container {
+  height: 6.5rem;
+  padding: 0 2rem;
+  background-color: #d1411e;
+  direction: rtl;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.item:nth-child(2) {
+  flex: 5;
+  justify-content: center;
+  
+}
+.item:last-child {
+  justify-content: flex-end;
+}
+
+.orderMain {
+  display: flex;
+  align-items: center;
+}
+.callButton {
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+}
+.texts {
+  margin-right: 1rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text:first-child {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.text:last-child {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.list {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  color: white;
+}
+
+.listItem {
+  margin: 1.3rem;
+  font-weight: 500;
+}
+.listIogoImage {
+  top: 5px !important;
+  cursor: pointer;
+  transition: transform 0.7s ease-in-out;
+}
+.listIogoImage:hover {
+  transform: rotate(270deg);
+}
+
+.cart {
+  position: relative;
+  cursor: pointer;
+}
+.counter {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #d1411e;
+}
+
+.menu {
+  display: none;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+  .item:nth-child(2) {
+    display: none;
+  }
+
+  .item:nth-child(1) {
+    flex: 3;
+  }
+
+  .orderMain {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .orderMenu {
+    display: flex;
+    align-items: center;
+  }
+  .hamburgerButton {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 3em;
+    height: 2em;
+    position: relative;
+    z-index: 10;
+    background-color: transparent;
+    background-image: url("https://res.cloudinary.com/dnpyq0ocz/image/upload/v1588441892/icon-hamburger.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .hamburgerButton.hamburgerOpen {
+    background-image: url("https://res.cloudinary.com/dnpyq0ocz/image/upload/v1588441892/icon-hamburger-close.svg");
+  }
+  .panel {
+    max-width: 500px;
+    background-color: #e75531;
+    background-size: 117px 188px;
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.34, 1.01);
+    position: fixed;
+    z-index: 5;
+    right: -100%;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .panelopen {
+    visibility: visible;
+    width: 100%;
+    right: 0%;
+    opacity: 1;
+    justify-content: space-evenly;
+  }
+}
+
+.panelItems {
+  margin: 0;
+  padding: 0 !important;
+}
+.panelItems li {
+  width: 37vw;
+  list-style: none;
+  font-size: 2em;
+  text-align: right;
+  margin-top: 1rem;
+  border-bottom: 1px solid white;
+  text-align: center;
+}
+
+.panelItems a {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 480px) {
+  .panelItems li {
+    width: 70vw;
+ 
+  }
+
+  }

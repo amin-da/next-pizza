@@ -1,0 +1,142 @@
+.container {
+  padding: 50px;
+  display: flex;
+}
+
+.left {
+  flex: 1;
+}
+.right {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.table {
+  width: 100%;
+  text-align: right;
+  padding: 1rem;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  width: 80%;
+}
+.row:last-child {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: baseline;
+}
+.done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inProgress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: inProgress 1s ease infinite alternate;
+}
+@keyframes inProgress {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.undone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.3;
+}
+.undone .checkedIcon,
+.inProgress .checkedIcon {
+  display: none;
+}
+
+.wrapper {
+  width: 90%;
+  max-height: 300px;
+  padding: 50px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #444;
+  color: white;
+}
+
+.totalTextTitle {
+  margin-left: 10px;
+}
+.button {
+  text-align: center;
+  background-color: white;
+  height: 30px;
+  width: 60%;
+  color: teal;
+  cursor: not-allowed;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  border-radius: 10px;
+  border: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+  }
+  .wrapper {
+    width: 100%;
+  }
+  .trTitle {
+    display: none;
+  }
+  .tr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-bottom: 16px;
+    text-align: center;
+    text-justify: auto;
+  }
+  .id::before {
+    content: "شماره سفارش : ";
+    font-weight: bold;
+  }
+  .name::before {
+    content: " نام مشتری : ";
+    font-weight: bold;
+    text-align: right;
+  }
+  .address::before {
+    content: "  آدرس : ";
+    font-weight: bold;
+  }
+
+  .total::before {
+    content: "  جمع کل : ";
+    font-weight: bold;
+  }
+  .row:last-child {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .done,
+  .undone,
+  .inProgress {
+    margin-bottom: 10px;
+  }
+}
